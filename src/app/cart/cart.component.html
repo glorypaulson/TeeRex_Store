@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div>
+    <div class="shopping_cart">
+        <p class="text">Shopping Cart</p>
+    </div>
+    <div class="cart-container" *ngFor="let prod of cartProducts; let i=index">
+        <div class="cart-content">
+            <img [src]="prod.imageURL" alt="" width="200" height="150">
+            <div class="price_title">
+                <p>{{prod.name}}</p>
+                <h4>{{prod.price}}</h4>
+            </div>
+            <div class="quantity_delete">
+                <div class="quantity_input">
+                    <p>Quantity</p>
+                    <button (click)="increase(i)">+</button>
+                    <input type="number" min="1" [max]="prod.quantity" [value]="prod.currentQuantity" class="input"> 
+                    <button (click)="decrease(i)">-</button>
+                </div>
+                <button class="delete_btn" (click)="deleteProduct(i)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="total" *ngIf="cartProducts.length > 0">
+    <div class="line_total">
+        <hr class="line">
+        <p>Total Amount</p> <span>{{ '₹' + totalPrice}}</span>
+    </div>
+</div>
+<div class="checkout" *ngIf="cartProducts.length===0">
+    <main>
+        <p style="display: flex; justify-content: center;">Cart is Empty</p>
+        <a href="" (click)="goToHome()">Continue Shopping</a>
+    </main>
+</div>

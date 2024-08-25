@@ -1,0 +1,58 @@
+<div class="filter_div">
+    <div class="checkBoxDiv">
+        <h4>Color</h4>
+        <div class="check_box">
+            <input type="checkbox" value="Red" (change)="onFilterChange('color', 'Red',$event)"> 
+            <label for="">Red</label>
+        </div>
+        <div class="check_box">
+            <input type="checkbox" value="Blue" (change)="onFilterChange('color', 'Blue',$event)"> 
+            <label for="">Blue</label>
+        </div>
+        <div class="check_box">
+            <input type="checkbox" value="Green" (change)="onFilterChange('color', 'Green',$event)"> 
+            <label for="">Green</label>
+        </div>
+    </div>
+    <div class="checkBoxDiv">
+        <h4>Gender</h4>
+        <div class="check_box">
+            <input type="checkbox" value="Men" (change)="onFilterChange('gender', 'Men',$event)"> 
+            <label for="">Men</label>
+        </div>
+        <div class="check_box">
+            <input type="checkbox" value="Women" (change)="onFilterChange('gender', 'Women',$event)"> 
+            <label for="">Women</label>
+        </div>
+    </div>
+    <div class="checkBoxDiv">
+        <h4>Price</h4>
+        <div class="check_box">
+            <input type="checkbox" value="250" (change)="onFilterChange('price', '250',$event)"> 
+            <label for="">₹ 0 - 250</label>
+        </div>
+        <div class="check_box">
+            <input type="checkbox" value="251" (change)="onFilterChange('price', '251',$event)"> 
+            <label for="">₹ 251-450</label>
+        </div>
+        <div class="check_box">
+            <input type="checkbox" value="450" (change)="onFilterChange('price', '450',$event)"> 
+            <label for="">₹ 450</label>
+        </div>
+    </div>
+    <div class="checkBoxDiv">
+        <h4>Type</h4>
+        <div class="check_box">
+            <input type="checkbox" value="Polo" (change)="onFilterChange('type', 'Polo',$event)"> 
+            <label for="">Polo</label>
+        </div>
+        <div class="check_box">
+            <input type="checkbox" value="Hoodie" (change)="onFilterChange('type', 'Hoodie',$event)"> 
+            <label for="">Hoodie</label>
+        </div>
+        <div class="check_box">
+            <input type="checkbox" value="Basic" (change)="onFilterChange('type', 'Basic',$event)"> 
+            <label for="">Basic</label>
+        </div>
+    </div>
+</div>

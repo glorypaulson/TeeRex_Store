@@ -1,0 +1,13 @@
+<div class="container">
+        <div class="cards" *ngFor="let product of products;let i=index">
+            <div class="example-card">
+                <img class="example-card-image" [src]="product.imageURL" alt="image">
+                <div class="example-card-actions">
+                    <p>{{product.name}}</p>
+                    <p>₹ {{product.price}}</p>
+                    <button *ngIf="!clicked || i !== currentIndex" (click)="addToCart(i,count)">Add to Cart</button>
+                    <button *ngIf="clicked && i === currentIndex" (click)="goToCart()">Go to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,30 @@
+.searchDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(189 189 189);
+    height: 70px;
+}
+.input-box{
+    width: 400px;
+    height: 20px;
+    border-radius: 10px;
+    // border-color: grey;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.searchIconDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: grey;
+    margin-left: 10px;
+    cursor: pointer;
+}

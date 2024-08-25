@@ -1,0 +1,12 @@
+<app-header [products]="cartProducts"></app-header>
+<app-search-bar [products]="products" (searchResults)="handleSearchedProducts($event)"></app-search-bar>
+<div class="filter-product">
+    <app-filter class="filter" [products]="products" (filteredProducts)="handleFilteredProducts($event)"></app-filter>
+    <ng-container *ngIf="searchedProducts && searchedProducts.length > 0 || filteredProducts && filteredProducts.length > 0; else showAllProducts">
+        <app-product-card [products]="searchedProducts" class="products" *ngIf="searchedProducts"></app-product-card>
+        <app-product-card [products]="filteredProducts" class="products" *ngIf="filteredProducts"></app-product-card>
+    </ng-container>
+    <ng-template #showAllProducts>
+        <app-product-card [products]="products"></app-product-card>
+    </ng-template>
+</div>
